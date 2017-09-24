@@ -9,7 +9,7 @@ from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.static import serve
-from coachDashboard.urls import urlpatterns as webapp_urls
+from coachDashboard import views
 
 admin.autodiscover()
 
@@ -19,7 +19,7 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     url(r'^admin/', include(admin.site.urls)),  # NOQA
-    url(r'^coachDashboard/', include(webapp_urls)),
+    url(r'^coachDashboard/', views.index),
     url(r'^', include('cms.urls'))
 )
 

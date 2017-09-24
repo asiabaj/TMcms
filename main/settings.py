@@ -78,6 +78,12 @@ STATICFILES_DIRS = (
 SITE_ID = 1
 
 
+# for static files
+#PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+
+#STATICFILES_DIRS = ( os.path.join(PROJECT_ROOT, 'static'))
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
